@@ -8,12 +8,51 @@
     <artifactId>mapreduce-example</artifactId>
     <version>1.0-SNAPSHOT</version>
 
-
     <properties>
         <cdh.version>2.6.0-cdh5.13.2</cdh.version>
+        <cdh.mr1.version>2.6.0-mr1-cdh5.13.1</cdh.mr1.version>
     </properties>
 
+    <dependencies>
 
+        <dependency>
+            <groupId>org.apache.hadoop</groupId>
+            <artifactId>hadoop-core</artifactId>
+            <version>${cdh.mr1.version}</version>
+            <!--<scope>provided</scope>-->
+        </dependency>
+
+        <dependency>
+            <groupId>org.apache.hadoop</groupId>
+            <artifactId>hadoop-client</artifactId>
+            <version>${cdh.mr1.version}</version>
+            <!--<scope>provided</scope>-->
+        </dependency>
+
+
+        <dependency>
+            <groupId>org.apache.hadoop</groupId>
+            <artifactId>hadoop-mapreduce-client-common</artifactId>
+            <version>${cdh.version}</version>
+            <!--<scope>provided</scope>-->
+        </dependency>
+
+        <dependency>
+            <groupId>org.apache.hadoop</groupId>
+            <artifactId>hadoop-mapreduce-client-core</artifactId>
+            <version>${cdh.version}</version>
+            <!--<scope>provided</scope>-->
+        </dependency>
+
+        <dependency>
+            <groupId>org.apache.hadoop</groupId>
+            <artifactId>hadoop-mapreduce-client-app</artifactId>
+            <version>${cdh.version}</version>
+            <!--<scope>provided</scope>-->
+        </dependency>
+
+
+    </dependencies>
 
     <repositories>
         <repository>
