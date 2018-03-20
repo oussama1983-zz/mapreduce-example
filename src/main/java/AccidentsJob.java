@@ -28,9 +28,6 @@ public class AccidentsJob {
 
         job.setReducerClass(AccidentsReducer.class);
 
-        job.setNumReduceTasks(1);
-
-
         job.setOutputKeyClass(Text.class);
         job.setOutputValueClass(IntWritable.class);
 
@@ -39,7 +36,6 @@ public class AccidentsJob {
 
         FileOutputFormat.setOutputPath(job, outputDir);
         job.setOutputFormatClass(TextOutputFormat.class);
-
 
         FileSystem hdfs = FileSystem.get(conf);
         if (hdfs.exists(outputDir)) {
