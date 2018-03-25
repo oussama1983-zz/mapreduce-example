@@ -10,9 +10,8 @@
 
 
     <properties>
-        <cdh.version>2.6.0-cdh5.13.2</cdh.version>
-    </properties>
 
+    </properties>
 
 
     <repositories>
