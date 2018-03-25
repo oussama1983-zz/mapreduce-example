@@ -7,5 +7,12 @@ Pedestrian_Crossing_Human_Control STRING,Pedestrian_Crossing_Physical_Facilities
 Road_Surface_Conditions STRING,Special_Conditions_at_Site STRING,Carriageway_Hazards STRING,Urban_or_Rural_Area STRING,
 Did_Police_Officer_Attend_Scene_of_Accident STRING,LSOA_of_Accident_Location STRING,Year STRING
 )
+ROW FORMAT SERDE 'org.apache.hadoop.hive.serde2.OpenCSVSerde'
+WITH SERDEPROPERTIES (
+   "separatorChar" = ",",
+   "quoteChar"     = "'",
+   "escapeChar"    = "\\"
+)
 STORED AS TEXTFILE
-LOCATION '/user/cloudera/dataset';
+LOCATION '/user/cloudera/dataset'
+TBLPROPERTIES ("skip.header.line.count"="1");
